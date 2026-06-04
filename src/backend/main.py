@@ -9,3 +9,7 @@ app = FastAPI(
 )
 
 app.include_router(router, prefix="/api")
+
+@app.get("/")
+def home():
+    return {"status": "Backend berhasil terhubung ke Vercel"}
